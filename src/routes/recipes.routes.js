@@ -1,8 +1,11 @@
-// Utilidad para manejar las rutas
+// 1. Utilidad para manejar las rutas
 import { Router } from "express";
-import { recipesControllers } from "../controllers/recipes.controllers.js";
+// 2. Usando el controlador que me brinda la respuesta
+import { getRecipes } from "../controllers/recipes.controllers.js";
 
+// 3. Constante para esportar las difeentes rutas con ayuda del modulo Routes
 const router = Router();
-// Cuando se enrute a /recipes devuelve la respuesta del controlador recipes
-router.get("/recipes", recipesControllers);
+
+// 4. Cuando se consulte /recipes devuelve la respuesta del controlador recipesControllers
+router.get("/recipes", getRecipes);
 export default router;
