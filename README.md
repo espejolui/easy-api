@@ -20,6 +20,6 @@
 ## 3. Conection to DB
 
 - Creación conexión en archivo **"db.js"**
-- Creación functions CRUD in file **name-file.controllers.js**
-- Creación routes in file **name-file.routes.js**
-- Creación file **main.js**
+- Creación functions CRUD en archivo **name-file.controllers.js**
+- Creación routes en archivo **name-file.routes.js**
+- Creación archivo **main.js**
