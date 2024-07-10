@@ -6,6 +6,8 @@ export const pool = createPool({
   host: "localhost",
   user: "root",
   password: "Camaro@3186",
-  port: 31061,
+  port: 33061,
   database: "easyfood",
 });
+
+
