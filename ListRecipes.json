@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "dayWeek": "lunes",
+    "category": "desayuno",
+    "title": "Yogurt con cereal y frutas",
+    "preparation": "Colocar el yogurt en un bol. Añadir el cereal y las frutas por encima. Servir inmediatamente.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296686/Yogur_con_Cereal_y_Frutas_vqppsb.webp",
+    "ingredients": [
+      { "name": "Puñado de frutas", "amount": "al gusto" },
+      { "name": "Yogurt natural", "amount": "1 taza" },
+      { "name": "Cereal", "amount": "1/2 taza" }
+    ]
+  },
+
+  {
+    "id": 2,
+    "dayWeek": "lunes",
+    "category": "almuerzo",
+    "title": "Arroz de pollo",
+    "preparation": "En una olla grande, calienta un poco de aceite de oliva y sofríe la cebolla, el ajo y el pimienton picado. Añade las pechugas de pollo cortadas en trozos y dóralas. Agrega la zanahoria cortada en rodajas y cocina por unos minutos. Incorpora el arroz y remueve bien para que se impregne de los sabores. Vierte el tomate triturado y mezcla. Añade el caldo de pollo suficiente para cubrir todos los ingredientes y sazona con sal y pimienta. Deja cocinar a fuego medio-bajo hasta que el arroz esté tierno y el pollo esté bien cocido. Añade los guisantes y cocina por unos minutos más. Rectifica la sazón y sirve caliente.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296675/arroz-de-pollo_b6qyyb.webp",
+    "ingredients": [
+      { "name": "Arroz", "amount": "1 taza" },
+      { "name": "Pechugas de pollo", "amount": "2 unidades" },
+      { "name": "Cebolla", "amount": "1 unidad" },
+      { "name": "Ajo", "amount": "2 dientes" },
+      { "name": "Pimiento rojo", "amount": "1 unidad" },
+      { "name": "Zanahoria", "amount": "1 unidad" },
+      { "name": "Guisantes", "amount": "1 lata" },
+      { "name": "Tomate triturado", "amount": "1 lata" },
+      { "name": "Caldo de pollo", "amount": "al gusto" },
+      { "name": "Aceite de oliva", "amount": "al gusto" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+
+  {
+    "id": 3,
+    "dayWeek": "lunes",
+    "category": "cena",
+    "title": "Tortilla de patatas",
+    "preparation": "Pelar y cortar las patatas en rodajas finas. Picar la cebolla. Freír las patatas y la cebolla en abundante aceite hasta que estén tiernas. Batir los huevos en un bol grande y agregar las patatas y la cebolla escurridas. Mezclar bien. Calentar un poco de aceite en una sartén y verter la mezcla. Cocinar a fuego medio hasta que esté cuajada, luego dar la vuelta con la ayuda de un plato y cocinar por el otro lado.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Tortilla_con_papatatas_dc0h8u.webp",
+    "ingredients": [
+      { "name": "Patatas medianas", "amount": "4 unidades" },
+      { "name": "Cebolla", "amount": "1 unidad" },
+      { "name": "Huevos", "amount": "5 unidades" },
+      { "name": "Aceite de oliva", "amount": "al gusto" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+
+  {
+    "id": 4,
+    "dayWeek": "martes",
+    "category": "desayuno",
+    "title": "Tostadas con aguacate y huevo",
+    "preparation": "Tostar las rebanadas de pan. Aplastar el aguacate y untarlo sobre las tostadas. Cocinar los huevos al gusto (poché, revueltos o fritos) y colocarlos sobre el aguacate.Sazonar con sal y pimienta al gusto.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296681/Tostadas_con_aguacate_y_huevo_wkuc6e.webp",
+    "ingredients": [
+      { "name": "Pan integral", "amount": "2 rebanadas" },
+      { "name": "Aguacate Maduro", "amount": "1 unidad" },
+      { "name": "Huevos", "amount": "2 unidades" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+
+  {
+    "id": 5,
+    "dayWeek": "martes",
+    "category": "almuerzo",
+    "title": "Sobrebarriga en salsa criolla",
+    "preparation": "Cocinar la sobrebarriga en una olla grande con agua y sal hasta que esté tierna (aproximadamente 2 horas). Retirar y reservar. Para la salsa criolla, picar finamente los tomates, la cebolla, el ajo y el pimiento. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que estén blandos. Agregar el caldo de res y cocinar hasta que la salsa espese. Cortar la sobrebarriga en trozos y añadirla a la salsa. Dejar cocinar a fuego bajo por unos minutos para que la carne absorba los sabores. Servir caliente, acompañado de arroz blanco y plátano maduro frito.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Sobrebarriga_en_salsa_criolla_ooq6al.webp",
+    "ingredients": [
+      { "name": "Sobrebarriga", "amount": "1 kilo" },
+      { "name": "Tomate", "amount": "2 unidades" },
+      { "name": "Cebolla", "amount": "1 unidad" },
+      { "name": "Ajo", "amount": "2 dientes" },
+      { "name": "Pimiento rojo", "amount": "1 unidad" },
+      { "name": "Caldo de res", "amount": "1 taza" },
+      { "name": "Aceite de oliva", "amount": " 2 cucharada" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 6,
+    "dayWeek": "martes",
+    "category": "cena",
+    "title": "Sopa de verduras",
+    "preparation": "Pelar y cortar todas las verduras en trozos pequeños. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que las verduras estén tiernas. Sazonar con sal y pimienta al gusto y servir caliente.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Sopa_de_verduras_xwd36t.webp",
+    "ingredients": [
+      { "name": "Zanahoria", "amount": "1 unidad" },
+      { "name": "Puerro", "amount": "1 unidad" },
+      { "name": "Patata", "amount": "1 unidad" },
+      { "name": "calabacín", "amount": "1 unidad" },
+      { "name": "Caldo de verduras", "amount": "1 litro" },
+      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+
+  {
+    "id": 7,
+    "dayWeek": "miercoles",
+    "category": "desayuno",
+    "title": "Tostadas con tomate y jamón ",
+    "preparation": "Tostar las rebanadas de pan. Rallar el tomate y untarlo sobre las tostadas. Colocar el jamón encima y rociar con aceite de oliva. Sazonar con sal al gusto. ",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296683/Tostadas_con_Tomate_y_Jam%C3%B3n_lv8p1q.webp",
+    "ingredients": [
+      { "name": "Pan integral", "amount": "2 rebanadas" },
+      { "name": "Tomate", "amount": "1 unidad" },
+      { "name": "Lonchas de jamón serrano", "amount": "2 lonchas" },
+      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "Sal", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 8,
+    "dayWeek": "miercoles",
+    "category": "almuerzo",
+    "title": "Mote de queso",
+    "preparation": "",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/mote-de-queso_tplpvl.webp",
+    "ingredients": [{ "name": "", "amount": "" }]
+  },
+  {
+    "id": 9,
+    "dayWeek": "miercoles",
+    "category": "cena",
+    "title": "Salmón al horno con verduras ",
+    "preparation": "Precalentar el horno a 180°C. Cortar las verduras en trozos y colocarlas en una bandeja de horno. Añadir los filetes de salmón encima de las verduras. Rociar con aceite de oliva, sal y pimienta. Hornear durante 20-25 minutos. ",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Salm%C3%B3n_al_Horno_con_Verduras_rlvrga.webp",
+    "ingredients": [
+      { "name": "Filete de salmón", "amount": "250 gramos" },
+      { "name": "Calabacín", "amount": "1 unidad" },
+      { "name": "Pimiento rojo", "amount": "1 unidad" },
+      { "name": "Cebolla ", "amount": "1 unidad" },
+      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 10,
+    "dayWeek": "jueves",
+    "category": "desayuno",
+    "title": "Arepa con queso y hogao",
+    "preparation": "En un bol, mezclar la harina de maíz, el agua y la sal hasta obtener una masa homogénea. Incorporar el queso rallado y amasar bien. Formar pequeñas bolas con la masa y aplanarlas para hacer las arepas. Cocinar las arepas en una sartén caliente con un poco de mantequilla, aproximadamente 5 minutos por cada lado hasta que estén doradas. Para el hogao, picar finamente los tomates, la cebolla y el ajo. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que se formen una salsa espesa. Sazonar con sal y pimienta. Servir las arepas con el hogao por encima.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/Arepas_con_queso_y_hogao_yd4qjf.webp",
+    "ingredients": [
+      { "name": "Arina de maíz precocida", "amount": "2 tazas" },
+      { "name": "Agua", "amount": "2 1/2 tazas" },
+      { "name": "Queso rallado", "amount": "1 taza" },
+      { "name": "Mantequilla", "amount": "1/4 taza" },
+      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Tomate", "amount": "2 unidades" },
+      { "name": "Cebolla", "amount": "1 unidad" },
+      { "name": "Ajo", "amount": "2 dientes" },
+      { "name": "Aceite de oliva", "amount": " cucharada" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 11,
+    "dayWeek": "jueves",
+    "category": "almuerzo",
+    "title": "Bandeja paisa",
+    "preparation": "",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/bandeja-paisa_pjazwe.webp",
+    "ingredients": [{ "name": "", "amount": "" }]
+  },
+
+  {
+    "id": 12,
+    "dayWeek": "jueves",
+    "category": "cena",
+    "title": "Pasta al pesto",
+    "preparation": "Cocer la pasta según las instrucciones del paquete. En una licuadora, mezclar la albahaca, el ajo, los piñones, el queso parmesano y el aceite de oliva hasta obtener una salsa. Mezclar la pasta cocida con la salsa pesto. Sazonar con sal y pimienta al gusto.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/Pasta_al_pesto_gtyta9.webp",
+    "ingredients": [
+      { "name": "Pasta", "amount": "200 gramos" },
+      { "name": "Albahaca fresca", "amount": "20 gramos" },
+      { "name": "Ajo", "amount": "1 diente" },
+      { "name": "Piñones", "amount": "30 gramos" },
+      { "name": "Queso parmesano rallado", "amount": "50 gramos" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 13,
+    "dayWeek": "viernes",
+    "category": "desayuno",
+    "title": "Crena de calabaza ",
+    "preparation": "Pelar y cortar la calabaza, la patata y la cebolla. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que estén tiernas. Triturar con una batidora hasta obtener una crema suave. Sazonar con sal y pimienta al gusto y servir caliente. ",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296671/Crema_de_calabaza_ywyu5s.webp",
+    "ingredients": [
+      { "name": "Calabaza", "amount": "1 kg" },
+      { "name": "Patata", "amount": "1 unidad" },
+      { "name": "Caldo de verduras", "amount": "1 litro" },
+      { "name": "Cebolla ", "amount": "1 unidad" },
+      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 14,
+    "dayWeek": "viernes",
+    "category": "almuerzo",
+    "title": "Ajiaco",
+    "preparation": "En una olla grande, poner a cocinar las pechugas de pollo y las mazorcas en los 2 litros de agua con un poco de sal. Una vez el pollo esté cocido, retirarlo y desmecharlo. Reservar. Agregar las papas a la olla y cocinar hasta que estén blandas. Añadir las guascas y dejar cocinar por unos minutos más. Incorporar el pollo desmechado y mezclar bien. Servir el ajiaco en platos hondos acompañado de alcaparras, crema de leche y aguacate en rodajas.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/Ajiaco_colombiano_kplin7.webp",
+    "ingredients": [
+      { "name": "Pechugas de pollo", "amount": "3 unidades" },
+      { "name": "Mazorcas en trozos", "amount": "3 unidades" },
+      { "name": "Agua", "amount": "2 litros" },
+      { "name": "Papa criolla", "amount": "3 unidades" },
+      { "name": "Papa sabanera", "amount": "3 unidades" },
+      { "name": "Papa pastusa", "amount": "3 unidades" },
+      { "name": "Guascas", "amount": "1 taza" },
+      { "name": "Alcaparras", "amount": "1 taza" },
+      { "name": "Crema de leche", "amount": "1 taza" },
+      { "name": "Aguacate", "amount": "1 unidad" },
+      { "name": "Sal", "amount": "al gusto" }
+    ]
+  },
+  {
+    "id": 15,
+    "dayWeek": "viernes",
+    "category": "cena",
+    "title": "Ensalada de pollo",
+    "preparation": "Cocinar la pechuga de pollo a la plancha y cortarla en tiras. Lavar y cortar la lechuga, el tomate, el pepino, la zanahoria y la cebolla. Mezclar todos los ingredientes en un bol. Aliñar con aceite de oliva, zumo de limón, sal y pimienta.",
+    "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/Ensalada_de_pollo_rzziac.webp",
+    "ingredients": [
+      { "name": "Pechuga de pollo", "amount": "200 gramos" },
+      { "name": "Lechuga romana", "amount": "1 unidad" },
+      { "name": "tomate", "amount": "1 unidad" },
+      { "name": "Pepino", "amount": "1/2 unidad" },
+      { "name": "Zanahoria", "amount": "1 unidad" },
+      { "name": "Cebolla morada", "amount": "1/4 unidad" },
+      { "name": "Zumo de limón", "amount": "al gusto" },
+      { "name": "Sal", "amount": "al gusto" },
+      { "name": "Pimienta", "amount": "al gusto" }
+    ]
+  }
+]
