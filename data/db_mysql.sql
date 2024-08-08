@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS recipe(
     photo VARCHAR(255) NOT NULL,
     day_id BINARY(16),
     type_id BINARY(16),
+    -- Referencia de los id de estas tablas para no repetir datos, es decir esos id se van a relacionar con las recetas ingresadas
     FOREIGN KEY (day_id) REFERENCES day(id),
     FOREIGN KEY (type_id) REFERENCES type(id)
 );
@@ -55,8 +56,8 @@ CREATE TABLE IF NOT EXISTS recipe(
 SHOW TABLES;
 DESCRIBE recipe;
 
+-- Estableciendo a que día y tipo de comida pertenece la receta que voy a ingresar
 SET @day_uuid = (SELECT id FROM day WHERE day_week = 'lunes');
-
 SET @type_uuid = (SELECT id FROM type WHERE type_food = 'desayuno');
 
 INSERT INTO recipe(

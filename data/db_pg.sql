@@ -24,7 +24,7 @@ INSERT INTO day(day_week) VALUES
     ('viernes');
 
 -- Leer datos de la tabla 'day'
-SELECT id::TEXT AS id, day_week FROM day;
+SELECT id, day_week FROM day;
 
 -- ---------------   2   ---------------
 
@@ -44,7 +44,7 @@ INSERT INTO type(type_food) VALUES
     ('cena');
 
 -- Leer datos de la tabla 'type'
-SELECT id::TEXT AS id, type_food FROM type;
+SELECT id, type_food FROM type;
 
 -- ---------------   3   ---------------
 
