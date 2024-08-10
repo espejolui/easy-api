@@ -8,6 +8,7 @@ import recipes from "./routes/recipes.routes.js";
 const app = express();
 
 // 4. Rutas importadas | añadiendo palabra "api" antes de dicha ruta simplemente por conveción
+app.use(express.json());
 app.use("/api", recipes);
 
 // 5. Creando el el puerto y diciendole que escuche por él
