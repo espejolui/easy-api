@@ -1,13 +1,23 @@
-// 1. Promise para poder manejar el async await
-import { createPool } from "mysql2/promise";
+import pg from "pg";
+import { env, loadEnvFile } from "node:process";
+loadEnvFile("./.env");
 
-process.loadEnvFile();
-
-// 2. Configuración con los datos de mi db usando el objeto creayePool de Express
-export const pool = createPool({
-  host: process.env.HOST_DEV,
-  user: process.env.USER_DEV,
-  password: process.env.PASSWORD_DEV,
-  port: process.env.PORT_DEV,
-  database: process.env.DATABASE_DEV,
+/* --- Configuración con postgreSQL */
+export const pool = new pg.Pool({
+  host: env.HOST_DB,
+  database: env.DATABASE_DB,
+  user: env.USER_DB,
+  password: env.PASSWORD_DB,
+  port: env.PORT_DB,
 });
+
+/* --- Configuración con MySQL --- */
+//import { createPool } from "mysql2/promise";
+/*
+export const pool = createPool({
+  host: env.HOST_DB,
+  database: env.DATABASE_DB,
+  user: env.USER_DB,
+  password: env.PASSWORD_DB,
+  port: env.PORT_DB,
+});*/
