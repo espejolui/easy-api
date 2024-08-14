@@ -1,6 +1,5 @@
 // 1. Utilidad para manejar las rutas
 import { Router } from "express";
-import { pool } from "../db.js"; // 2. usando el objeto pool de pg
 import {
   getRecipes,
   getRecipe,
