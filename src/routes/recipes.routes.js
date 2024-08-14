@@ -8,7 +8,7 @@ import {
   updateRecipe,
 } from "../controllers/recipes.controllers.js";
 
-// 3. Constante para esportar las diferentes rutas con ayuda del modulo Routes
+// 3. Constante para exportar las diferentes rutas con ayuda del modulo Routes
 const router = Router();
 
 // 4. Cuando se consulte /recipes devuelve la respuesta del controlador recipesControllers
