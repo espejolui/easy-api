@@ -1,4 +1,4 @@
-import { pool } from "../db.js";
+import { pool } from "../db.js"; // Método para crear el pool y escuchar la db
 
 // 1. Obtener todas las recetas
 export const getRecipes = async (req, res) => {
