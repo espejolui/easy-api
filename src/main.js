@@ -1,17 +1,10 @@
-// 1. Importando express para usarlo
-import express from "express";
+import express from "express"; // 1. Usando express
+import recipes from "./routes/recipes.routes.js"; // 2. Mis rutas definidas
 
-// 2. Importando rutas creadas para ser usadas
-import recipes from "./routes/recipes.routes.js";
+const app = express(); // 3. Levanatando servidor
+app.use(express.json()); // 4. Formatendo salidas a json
 
-// 3. Creando constante para escuchar en un puerto leventar el servidor
-const app = express();
-
-// 4. Rutas importadas | añadiendo palabra "api" antes de dicha ruta simplemente por conveción
-app.use(express.json());
 app.use("/api", recipes);
 
-// 5. Creando el el puerto y diciendole que escuche por él
-const PORT = 5000;
-app.listen(PORT);
-console.log(`Listen in port: ${PORT}`);
+const PORT = 1234;
+app.listen(PORT); // Escuchando el puerto
