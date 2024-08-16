@@ -5,7 +5,7 @@ export const getRecipes = async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
 
   const { rows } = await pool.query(
-    "SELECT r.id, r.title, r.preparation, r.photo, d.day_week, t.type_food FROM recipe r JOIN day d ON r.day_id = d.id JOIN type t ON r.type_id = t.id;",
+    "SELECT recipe.id, recipe.title, recipe.preparation, recipe.photo, day.day_week, type.type_food FROM recipe JOIN day ON recipe.day_id = day.id JOIN type ON recipe.type_id = type.id;"
   );
   res.json(rows);
 };
@@ -36,11 +36,11 @@ export const createRecipe = async (req, res) => {
 
     const dayResult = await pool.query(
       "SELECT id FROM day WHERE day_week = $1",
-      [day_week],
+      [day_week]
     );
     const typeResult = await pool.query(
       "SELECT id FROM type WHERE type_food = $1",
-      [type_food],
+      [type_food]
     );
 
     if (dayResult.rows.length === 0 || typeResult.rows.length === 0) {
@@ -54,7 +54,7 @@ export const createRecipe = async (req, res) => {
 
     const { rows } = await pool.query(
       "INSERT INTO recipe ( title, preparation, photo, day_id, type_id) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-      [title, preparation, photo, day_id, type_id],
+      [title, preparation, photo, day_id, type_id]
     );
 
     res.status(201).json({ rows });
@@ -69,7 +69,7 @@ export const deleteRecipe = async (req, res) => {
   const { id } = req.params;
   const { rows, rowCount } = await pool.query(
     "DELETE FROM recipe WHERE id = $1 RETURNING *",
-    [id],
+    [id]
   );
   if (rowCount === 0) {
     return res.status(404).json({ mensaje: "Receta eliminada o inexistente" });
@@ -85,7 +85,7 @@ export const updateRecipe = async (req, res) => {
 
   const { rows } = await pool.query(
     "UPDATE recipe SET title = $1, preparation = $2, photo = $3 WHERE id = $4 RETURNING *",
-    [data.title, data.preparation, data.photo, id],
+    [data.title, data.preparation, data.photo, id]
   );
 
   res.json(rows[0]);
