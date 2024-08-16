@@ -68,9 +68,15 @@ VALUES
     (SELECT id FROM type WHERE type_food = 'desayuno'));
 
 -- 4.3 Leer datos de la tabla 'recipe'
-SELECT id, title FROM recipe;
+SELECT * FROM recipe;
 
--- 4.4 Leer datos de la tabla 'recipe' con joins
+-- 4.4 Consulta combinada de varias tablas de la db. sin alias en las tablas
+SELECT recipe.id, recipe.title, recipe.preparation, recipe.photo, day.day_week, type.type_food
+FROM recipe
+JOIN day ON recipe.day_id = day.id
+JOIN type ON recipe.type_id = type.id;
+
+-- 4.5 Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
 SELECT r.id, r.title, d.day_week, t.type_food
 FROM recipe r
 JOIN day d ON r.day_id = d.id
