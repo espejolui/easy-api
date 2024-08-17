@@ -18,3 +18,27 @@ VALUES
   (3, (SELECT id FROM ingredient WHERE name = 'aceite de oliva'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
   (3, (SELECT id FROM ingredient WHERE name = 'sal'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
   (3, (SELECT id FROM ingredient WHERE name = 'pimienta'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto'));
+
+-- RECETA #3. hecha con el endpoint de la API
+{
+    "recipe_id": 2,
+    "ingredients": [
+        { "name": "arroz", "quantity": 1.0, "unit": "taza" },
+        { "name": "pechuga de pollo", "quantity": 2.0, "unit": "unidad" },
+        { "name": "cebolla morada", "quantity": 1.0, "unit": "unidad" },
+        { "name": "ajo", "quantity": 2.0, "unit": "diente" },
+        { "name": "pimiento rojo", "quantity": 1.0, "unit": "unidad" },
+        { "name": "zanahoria", "quantity": 1.0, "unit": "unidad" },
+        { "name": "guisantes", "quantity": 1.0, "unit": "lata" },
+        { "name": "tomate", "quantity": 1.0, "unit": "lata" },
+        { "name": "caldo de pollo", "quantity": "al gusto", "unit": "unidad" },
+        { "name": "aceite de oliva", "quantity": "al gusto", "unit": "unidad" },
+        { "name": "sal", "quantity": "al gusto", "unit": "unidad" },
+        { "name": "pimienta", "quantity": "al gusto", "unit": "unidad" }
+    ]
+}
+
+
+
+
+
