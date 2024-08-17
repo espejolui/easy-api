@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "dayWeek": "lunes",
-    "category": "desayuno",
-    "title": "Yogurt con cereal y frutas",
+    "day_week": "lunes",
+    "type_food": "desayuno",
+    "title": "yogurt con cereal y frutas",
     "preparation": "Colocar el yogurt en un bol. Añadir el cereal y las frutas por encima. Servir inmediatamente.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296686/Yogur_con_Cereal_y_Frutas_vqppsb.webp",
     "ingredients": [
@@ -15,9 +15,9 @@
 
   {
     "id": 2,
-    "dayWeek": "lunes",
-    "category": "almuerzo",
-    "title": "Arroz de pollo",
+    "day_week": "lunes",
+    "type_food": "almuerzo",
+    "title": "arroz de pollo",
     "preparation": "En una olla grande, calienta un poco de aceite de oliva y sofríe la cebolla, el ajo y el pimienton picado. Añade las pechugas de pollo cortadas en trozos y dóralas. Agrega la zanahoria cortada en rodajas y cocina por unos minutos. Incorpora el arroz y remueve bien para que se impregne de los sabores. Vierte el tomate triturado y mezcla. Añade el caldo de pollo suficiente para cubrir todos los ingredientes y sazona con sal y pimienta. Deja cocinar a fuego medio-bajo hasta que el arroz esté tierno y el pollo esté bien cocido. Añade los guisantes y cocina por unos minutos más. Rectifica la sazón y sirve caliente.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296675/arroz-de-pollo_b6qyyb.webp",
     "ingredients": [
@@ -38,9 +38,9 @@
 
   {
     "id": 3,
-    "dayWeek": "lunes",
-    "category": "cena",
-    "title": "Tortilla de patatas",
+    "day_week": "lunes",
+    "type_food": "cena",
+    "title": "tortilla de patatas",
     "preparation": "Pelar y cortar las patatas en rodajas finas. Picar la cebolla. Freír las patatas y la cebolla en abundante aceite hasta que estén tiernas. Batir los huevos en un bol grande y agregar las patatas y la cebolla escurridas. Mezclar bien. Calentar un poco de aceite en una sartén y verter la mezcla. Cocinar a fuego medio hasta que esté cuajada, luego dar la vuelta con la ayuda de un plato y cocinar por el otro lado.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Tortilla_con_papatatas_dc0h8u.webp",
     "ingredients": [
@@ -55,10 +55,10 @@
 
   {
     "id": 4,
-    "dayWeek": "martes",
-    "category": "desayuno",
-    "title": "Tostadas con aguacate y huevo",
-    "preparation": "Tostar las rebanadas de pan. Aplastar el aguacate y untarlo sobre las tostadas. Cocinar los huevos al gusto (poché, revueltos o fritos) y colocarlos sobre el aguacate.Sazonar con sal y pimienta al gusto.",
+    "day_week": "martes",
+    "type_food": "desayuno",
+    "title": "tostadas con aguacate y huevo",
+    "preparation": "Tostar las rebanadas de pan. Aplastar el aguacate y untarlo sobre las tostadas. Cocinar los huevos al gusto (poché, revueltos o fritos) y colocarlos sobre el aguacate.Sazonar con sal y pimienta al gusto.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296681/Tostadas_con_aguacate_y_huevo_wkuc6e.webp",
     "ingredients": [
       { "name": "Pan integral", "amount": "2 rebanadas" },
@@ -71,8 +71,8 @@
 
   {
     "id": 5,
-    "dayWeek": "martes",
-    "category": "almuerzo",
+    "day_week": "martes",
+    "type_food": "almuerzo",
     "title": "Sobrebarriga en salsa criolla",
     "preparation": "Cocinar la sobrebarriga en una olla grande con agua y sal hasta que esté tierna (aproximadamente 2 horas). Retirar y reservar. Para la salsa criolla, picar finamente los tomates, la cebolla, el ajo y el pimiento. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que estén blandos. Agregar el caldo de res y cocinar hasta que la salsa espese. Cortar la sobrebarriga en trozos y añadirla a la salsa. Dejar cocinar a fuego bajo por unos minutos para que la carne absorba los sabores. Servir caliente, acompañado de arroz blanco y plátano maduro frito.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Sobrebarriga_en_salsa_criolla_ooq6al.webp",
@@ -90,8 +90,8 @@
   },
   {
     "id": 6,
-    "dayWeek": "martes",
-    "category": "cena",
+    "day_week": "martes",
+    "type_food": "cena",
     "title": "Sopa de verduras",
     "preparation": "Pelar y cortar todas las verduras en trozos pequeños. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que las verduras estén tiernas. Sazonar con sal y pimienta al gusto y servir caliente.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Sopa_de_verduras_xwd36t.webp",
@@ -109,8 +109,8 @@
 
   {
     "id": 7,
-    "dayWeek": "miercoles",
-    "category": "desayuno",
+    "day_week": "miercoles",
+    "type_food": "desayuno",
     "title": "Tostadas con tomate y jamón ",
     "preparation": "Tostar las rebanadas de pan. Rallar el tomate y untarlo sobre las tostadas. Colocar el jamón encima y rociar con aceite de oliva. Sazonar con sal al gusto. ",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296683/Tostadas_con_Tomate_y_Jam%C3%B3n_lv8p1q.webp",
@@ -124,8 +124,8 @@
   },
   {
     "id": 8,
-    "dayWeek": "miercoles",
-    "category": "almuerzo",
+    "day_week": "miercoles",
+    "type_food": "almuerzo",
     "title": "Mote de queso",
     "preparation": "",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/mote-de-queso_tplpvl.webp",
@@ -133,8 +133,8 @@
   },
   {
     "id": 9,
-    "dayWeek": "miercoles",
-    "category": "cena",
+    "day_week": "miercoles",
+    "type_food": "cena",
     "title": "Salmón al horno con verduras ",
     "preparation": "Precalentar el horno a 180°C. Cortar las verduras en trozos y colocarlas en una bandeja de horno. Añadir los filetes de salmón encima de las verduras. Rociar con aceite de oliva, sal y pimienta. Hornear durante 20-25 minutos. ",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Salm%C3%B3n_al_Horno_con_Verduras_rlvrga.webp",
@@ -150,8 +150,8 @@
   },
   {
     "id": 10,
-    "dayWeek": "jueves",
-    "category": "desayuno",
+    "day_week": "jueves",
+    "type_food": "desayuno",
     "title": "Arepa con queso y hogao",
     "preparation": "En un bol, mezclar la harina de maíz, el agua y la sal hasta obtener una masa homogénea. Incorporar el queso rallado y amasar bien. Formar pequeñas bolas con la masa y aplanarlas para hacer las arepas. Cocinar las arepas en una sartén caliente con un poco de mantequilla, aproximadamente 5 minutos por cada lado hasta que estén doradas. Para el hogao, picar finamente los tomates, la cebolla y el ajo. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que se formen una salsa espesa. Sazonar con sal y pimienta. Servir las arepas con el hogao por encima.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/Arepas_con_queso_y_hogao_yd4qjf.webp",
@@ -172,8 +172,8 @@
   },
   {
     "id": 11,
-    "dayWeek": "jueves",
-    "category": "almuerzo",
+    "day_week": "jueves",
+    "type_food": "almuerzo",
     "title": "Bandeja paisa",
     "preparation": "",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/bandeja-paisa_pjazwe.webp",
@@ -182,8 +182,8 @@
 
   {
     "id": 12,
-    "dayWeek": "jueves",
-    "category": "cena",
+    "day_week": "jueves",
+    "type_food": "cena",
     "title": "Pasta al pesto",
     "preparation": "Cocer la pasta según las instrucciones del paquete. En una licuadora, mezclar la albahaca, el ajo, los piñones, el queso parmesano y el aceite de oliva hasta obtener una salsa. Mezclar la pasta cocida con la salsa pesto. Sazonar con sal y pimienta al gusto.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/Pasta_al_pesto_gtyta9.webp",
@@ -199,8 +199,8 @@
   },
   {
     "id": 13,
-    "dayWeek": "viernes",
-    "category": "desayuno",
+    "day_week": "viernes",
+    "type_food": "desayuno",
     "title": "Crena de calabaza ",
     "preparation": "Pelar y cortar la calabaza, la patata y la cebolla. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que estén tiernas. Triturar con una batidora hasta obtener una crema suave. Sazonar con sal y pimienta al gusto y servir caliente. ",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296671/Crema_de_calabaza_ywyu5s.webp",
@@ -216,8 +216,8 @@
   },
   {
     "id": 14,
-    "dayWeek": "viernes",
-    "category": "almuerzo",
+    "day_week": "viernes",
+    "type_food": "almuerzo",
     "title": "Ajiaco",
     "preparation": "En una olla grande, poner a cocinar las pechugas de pollo y las mazorcas en los 2 litros de agua con un poco de sal. Una vez el pollo esté cocido, retirarlo y desmecharlo. Reservar. Agregar las papas a la olla y cocinar hasta que estén blandas. Añadir las guascas y dejar cocinar por unos minutos más. Incorporar el pollo desmechado y mezclar bien. Servir el ajiaco en platos hondos acompañado de alcaparras, crema de leche y aguacate en rodajas.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296670/Ajiaco_colombiano_kplin7.webp",
@@ -237,8 +237,8 @@
   },
   {
     "id": 15,
-    "dayWeek": "viernes",
-    "category": "cena",
+    "day_week": "viernes",
+    "type_food": "cena",
     "title": "Ensalada de pollo",
     "preparation": "Cocinar la pechuga de pollo a la plancha y cortarla en tiras. Lavar y cortar la lechuga, el tomate, el pepino, la zanahoria y la cebolla. Mezclar todos los ingredientes en un bol. Aliñar con aceite de oliva, zumo de limón, sal y pimienta.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296674/Ensalada_de_pollo_rzziac.webp",
