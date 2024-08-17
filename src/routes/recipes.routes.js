@@ -1,7 +1,7 @@
 import { Router } from "express"; // 1. Método para manejar las rutas
 import { getRecipes, getRecipe } from "../controllers/get.js";
 import { createRecipe } from "../controllers/create.js";
-import { addIngredients } from "../controllers/ingredients.js";
+import { addIngredients } from "../controllers/addIngredients.js";
 import { updateRecipe } from "../controllers/update.js";
 import { deleteRecipe } from "../controllers/delete.js";
 
