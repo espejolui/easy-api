@@ -4,8 +4,9 @@ import { pool } from "../db.js"; // Método para crear el pool y escuchar la db
 export const getRecipes = async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
 
+  //const { rows } = await pool.query("SELECT id, title FROM recipe;");
   const { rows } = await pool.query(
-    "SELECT r.title, r.photo, d.day_week, t.type_food, STRING_AGG(i.name || ' (' || ri.quantity || ' ' || u.name || ')', ', ') AS ingredients FROM recipe r JOIN day d ON r.day_id = d.id JOIN type t ON r.type_id = t.id JOIN recipe_ingredient ri ON r.id = ri.recipe_id JOIN ingredient i ON ri.ingredient_id = i.id JOIN unit u ON ri.unit_id = u.id GROUP BY r.title, r.photo, d.day_week, t.type_food;",
+    " SELECT r.id, r.title, r.photo, d.day_week, t.type_food, STRING_AGG(i.name || ' (' || ri.quantity || ' ' || u.name || ')', ', ') AS ingredients FROM recipe r JOIN day d ON r.day_id = d.id JOIN type t ON r.type_id = t.id JOIN recipe_ingredient ri ON r.id = ri.recipe_id JOIN ingredient i ON ri.ingredient_id = i.id JOIN unit u ON ri.unit_id = u.id GROUP BY r.id, r.title, r.photo, d.day_week, t.type_food;",
   );
   res.json(rows);
 };
@@ -89,4 +90,36 @@ export const updateRecipe = async (req, res) => {
   );
 
   res.json(rows[0]);
+};
+
+// 6. Añadir ingredientes a una receta
+export const createRecipeIngredients = async (req, res) => {
+  const { recipe_id, ingredients } = req.body;
+
+  try {
+    if (!recipe_id || !Array.isArray(ingredients) || ingredients.length === 0) {
+      return res.status(400).json({ mensaje: "Datos inválidos" });
+    }
+
+    // Insertar en la tabla de relación
+    const insertQueries = ingredients.map((ingredient) =>
+      pool.query(
+        "INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id) VALUES ($1, $2, $3, $4)",
+        [
+          recipe_id,
+          ingredient.ingredient_id,
+          ingredient.quantity,
+          ingredient.unit_id,
+        ],
+      ),
+    );
+    await Promise.all(insertQueries);
+
+    res
+      .status(201)
+      .json({ mensaje: "Ingredientes añadidos a la receta con éxito" });
+  } catch (err) {
+    console.error("Error al añadir ingredientes:", err);
+    res.status(500).json({ mensaje: "Error interno del servidor" });
+  }
 };

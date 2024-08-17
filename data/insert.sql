@@ -9,7 +9,7 @@ VALUES
     (1, 38, 0.0, 1),  -- Puñado de frutas
     (1, 46, 1.0, 10);  -- Yogurt natural
 
--- RECETA #2. 
+-- RECETA #2.
 INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id)
 VALUES
   (3, (SELECT id FROM ingredient WHERE name = 'papa pastusa'), 4.00, (SELECT id FROM unit WHERE name = 'unidad')),
@@ -19,15 +19,15 @@ VALUES
   (3, (SELECT id FROM ingredient WHERE name = 'sal'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
   (3, (SELECT id FROM ingredient WHERE name = 'pimienta'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto'));
 
--- RECETA #3. hecha con el endpoint de la API
+-- RECETA #2. hecha con el endpoint de la API
 {
     "recipe_id": 2,
     "ingredients": [
-        { "name": "arroz", "quantity": 1.0, "unit": "taza" },
-        { "name": "pechuga de pollo", "quantity": 2.0, "unit": "unidad" },
-        { "name": "cebolla morada", "quantity": 1.0, "unit": "unidad" },
-        { "name": "ajo", "quantity": 2.0, "unit": "diente" },
-        { "name": "pimiento rojo", "quantity": 1.0, "unit": "unidad" },
+        { "name": "pan integral", "quantity": 2.0, "unit": "rebanada" },
+        { "name": "aguacate maduro", "quantity": 1.0, "unit": "unidad" },
+        { "name": "huevos", "quantity": 2.0, "unit": "unidad" },
+        { "name": "sal", "quantity": 0.0, "unit": "al gusto" },
+        { "name": "pimienta", "quantity": 0.0, "unit": "al gusto" },
         { "name": "zanahoria", "quantity": 1.0, "unit": "unidad" },
         { "name": "guisantes", "quantity": 1.0, "unit": "lata" },
         { "name": "tomate", "quantity": 1.0, "unit": "lata" },
@@ -38,7 +38,14 @@ VALUES
     ]
 }
 
-
-
-
-
+-- RECETA #4. hecha con el endpoint de la API
+{
+    "recipe_id": 4,
+    "ingredients": [
+        { "name": "pan integral", "quantity": 2.0, "unit": "rebanada" },
+        { "name": "aguacate maduro", "quantity": 1.0, "unit": "unidad" },
+        { "name": "huevos", "quantity": 2.0, "unit": "unidad" },
+        { "name": "sal", "quantity": 0.0, "unit": "al gusto" },
+        { "name": "pimienta", "quantity": 0.0, "unit": "al gusto" }
+    ]
+}
