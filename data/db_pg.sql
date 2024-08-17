@@ -2,18 +2,15 @@
 CREATE DATABASE easyfood;
 
 -- 2. Conectarse a la base de datos
-\c easyfood
+\c easyfood -- (sintaxis en psql si es con pgAdmin no es necesario)
 
--- 2. Eliminar la tabla si existe
-DROP TABLE IF EXISTS day;
-
--- 2.1. Crear la tabla 'day'
+-- 3. Crear la tabla 'day'
 CREATE TABLE day (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     day_week VARCHAR(10) NOT NULL UNIQUE
 );
 
--- 2.2. Insertar datos en la tabla 'day'
+-- 3.1. Insertar datos en la tabla 'day'
 INSERT INTO day(day_week) VALUES
     ('lunes'),
     ('martes'),
@@ -21,31 +18,19 @@ INSERT INTO day(day_week) VALUES
     ('jueves'),
     ('viernes');
 
--- 2.3. Leer datos de la tabla 'day'
-SELECT id, day_week FROM day;
-
--- 3. Eliminar la tabla si existe
-DROP TABLE IF EXISTS type;
-
--- 3.1. Crear la tabla 'type'
+-- 4. Crear la tabla 'type'
 CREATE TABLE type (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     type_food VARCHAR(10) NOT NULL UNIQUE
 );
 
--- 3.2. Insertar datos en la tabla 'type'
+-- 4.1. Insertar datos en la tabla 'type'
 INSERT INTO type(type_food) VALUES
     ('desayuno'),
     ('almuerzo'),
     ('cena');
 
--- 3.3. Leer datos de la tabla 'type'
-SELECT id, type_food FROM type;
-
--- 4. Eliminar la tabla si existe
-DROP TABLE IF EXISTS recipe;
-
--- 4.1. Crear la tabla 'recipe'
+-- 5. Crear la tabla 'recipe'
 CREATE TABLE recipe (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
@@ -57,7 +42,7 @@ CREATE TABLE recipe (
     FOREIGN KEY (type_id) REFERENCES type(id)
 );
 
--- 4.2. Insertar datos en la tabla 'recipe'
+-- 5.1. Insertar datos en la tabla 'recipe' desde postgres, si es con el endpoint es de otra forma
 INSERT INTO recipe(
     title, preparation, photo, day_id, type_id)
 VALUES
@@ -67,28 +52,19 @@ VALUES
     (SELECT id FROM day WHERE day_week = 'lunes'),
     (SELECT id FROM type WHERE type_food = 'desayuno'));
 
--- 4.3 Leer datos de la tabla 'recipe'
-SELECT * FROM recipe;
-
--- 4.4 Consulta combinada de varias tablas de la db. sin alias en las tablas
-SELECT recipe.id, recipe.title, recipe.preparation, recipe.photo, day.day_week, type.type_food
-FROM recipe
-JOIN day ON recipe.day_id = day.id
-JOIN type ON recipe.type_id = type.id;
-
--- 4.5 Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
+-- 5.2 Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
 SELECT r.id, r.title, d.day_week, t.type_food
 FROM recipe r
 JOIN day d ON r.day_id = d.id
 JOIN type t ON r.type_id = t.id;
 
--- 5. Crear la tabla 'ingredient'
+-- 6. Crear la tabla 'ingredient'
 CREATE TABLE ingredient (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL UNIQUE
 );
 
--- 5.1. Insertar datos en la tabla 'ingredient'
+-- 6.1. Insertar datos en la tabla 'ingredient'
 INSERT INTO ingredient (name) VALUES
     ('aceite'),
     ('aceite de oliva'),
@@ -139,7 +115,7 @@ INSERT INTO ingredient (name) VALUES
     ('zanahoria'),
     ('zumo de limón');
 
--- 6. Crear la tabla 'unit'
+-- 7. Crear la tabla 'unit'
 CREATE TABLE unit (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL UNIQUE
@@ -191,15 +167,6 @@ VALUES
   (3, (SELECT id FROM ingredient WHERE name = 'aceite de oliva'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
   (3, (SELECT id FROM ingredient WHERE name = 'sal'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
   (3, (SELECT id FROM ingredient WHERE name = 'pimienta'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto'));
-
--- 8. Crear la tabla para relación "ingredient" con tabla "unit"
-CREATE TABLE unit_ingredient (
-  ingredient_id INTEGER,
-  unit_id INTEGER,
-  PRIMARY KEY (ingredient_id, unit_id),
-  FOREIGN KEY (ingredient_id) REFERENCES ingredient(id),
-  FOREIGN KEY (unit_id) REFERENCES unit(id)
-);
 
 SELECT
     r.title,

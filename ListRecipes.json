@@ -139,13 +139,13 @@
     "preparation": "Precalentar el horno a 180°C. Cortar las verduras en trozos y colocarlas en una bandeja de horno. Añadir los filetes de salmón encima de las verduras. Rociar con aceite de oliva, sal y pimienta. Hornear durante 20-25 minutos. ",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Salm%C3%B3n_al_Horno_con_Verduras_rlvrga.webp",
     "ingredients": [
-      { "name": "Filete de salmón", "amount": "250 gramos" },
-      { "name": "Calabacín", "amount": "1 unidad" },
-      { "name": "Pimiento rojo", "amount": "1 unidad" },
-      { "name": "Cebolla ", "amount": "1 unidad" },
-      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
-      { "name": "Sal", "amount": "al gusto" },
-      { "name": "Pimienta", "amount": "al gusto" }
+      { "name": "filete de salmón", "amount": "250 gramos" },
+      { "name": "calabacín", "amount": "1 unidad" },
+      { "name": "pimiento rojo", "amount": "1 unidad" },
+      { "name": "cebolla ", "amount": "1 unidad" },
+      { "name": "aceite de oliva", "amount": "2 cucharadas" },
+      { "name": "sal", "amount": "al gusto" },
+      { "name": "pimienta", "amount": "al gusto" }
     ]
   },
   {
