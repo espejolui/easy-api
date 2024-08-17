@@ -33,7 +33,7 @@ INSERT INTO type(type_food) VALUES
 -- 5. Crear la tabla 'recipe'
 CREATE TABLE recipe (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
+    title VARCHAR(100) NOT NULL UNIQUE,
     preparation TEXT NOT NULL,
     photo VARCHAR(255) NOT NULL,
     day_id UUID,
@@ -113,7 +113,9 @@ INSERT INTO ingredient (name) VALUES
     ('tomate triturado'),
     ('yogurt natural'),
     ('zanahoria'),
-    ('zumo de limón');
+    ('zumo de limón'),
+    ('lonchas de jamón serrano'),
+    ('berenjena');
 
 -- 7. Crear la tabla 'unit'
 CREATE TABLE unit (
@@ -133,7 +135,8 @@ INSERT INTO unit (name) VALUES
     ('litro'),
     ('rebanada'),
     ('taza'),
-    ('unidad');
+    ('unidad'),
+    ('loncha');
 
 -- 7. Crear la tabla para relación tabla "recipe" con tabla "ingredient"
 CREATE TABLE recipe_ingredient (
