@@ -202,8 +202,8 @@ CREATE TABLE unit_ingredient (
 );
 
 SELECT
+    r.id,
     r.title,
-    r.photo,
     d.day_week,
     t.type_food,
     STRING_AGG(i.name || ' (' || ri.quantity || ' ' || u.name || ')', ', ') AS ingredients
@@ -220,4 +220,4 @@ JOIN
 JOIN
     unit u ON ri.unit_id = u.id
 GROUP BY
-    r.title, r.photo, d.day_week, t.type_food;
+    r.id, r.title, d.day_week, t.type_food;
