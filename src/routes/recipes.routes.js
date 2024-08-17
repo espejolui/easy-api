@@ -1,11 +1,8 @@
 import { Router } from "express"; // 1. Método para manejar las rutas
-import {
-  getRecipes,
-  getRecipe,
-  createRecipe,
-  deleteRecipe,
-  updateRecipe,
-} from "../controllers/recipes.controllers.js";
+import { getRecipes, getRecipe } from "../controllers/get.js"
+import { createRecipe } from "../controllers/create.js";
+import { deleteRecipe } from "../controllers/delete.js";
+import { updateRecipe,} from "../controllers/update.js";
 
 const router = Router(); // 2. almacenando rutas en la variable router
 
