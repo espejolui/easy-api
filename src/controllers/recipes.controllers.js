@@ -5,8 +5,31 @@ export const getRecipes = async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
 
   //const { rows } = await pool.query("SELECT id, title FROM recipe;");
-  const { rows } = await pool.query(
+  /* const { rows } = await pool.query(
     " SELECT r.id, r.title, r.photo, d.day_week, t.type_food, STRING_AGG(i.name || ' (' || ri.quantity || ' ' || u.name || ')', ', ') AS ingredients FROM recipe r JOIN day d ON r.day_id = d.id JOIN type t ON r.type_id = t.id JOIN recipe_ingredient ri ON r.id = ri.recipe_id JOIN ingredient i ON ri.ingredient_id = i.id JOIN unit u ON ri.unit_id = u.id GROUP BY r.id, r.title, r.photo, d.day_week, t.type_food;",
+  );*/
+  const { rows } = await pool.query(
+    `SELECT
+        r.id,
+        r.title,
+        r.photo,
+        d.day_week,
+        t.type_food,
+        STRING_AGG(
+            i.name || ' (' || COALESCE(ri.quantity::text, '0.00') || ' ' || COALESCE(u.name, '') || ')',
+            ', '
+        ) AS ingredients
+    FROM
+        recipe r
+        JOIN day d ON r.day_id = d.id
+        JOIN type t ON r.type_id = t.id
+        LEFT JOIN recipe_ingredient ri ON r.id = ri.recipe_id
+        LEFT JOIN ingredient i ON ri.ingredient_id = i.id
+        LEFT JOIN unit u ON ri.unit_id = u.id
+    GROUP BY
+        r.id, r.title, r.photo, d.day_week, t.type_food;
+
+`,
   );
   res.json(rows);
 };

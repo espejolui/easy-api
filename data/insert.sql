@@ -38,7 +38,7 @@ VALUES
     ]
 }
 
--- RECETA #4. hecha con el endpoint de la API
+-- RECETA #4. hecha desde psql
 {
     "recipe_id": 4,
     "ingredients": [
@@ -48,4 +48,19 @@ VALUES
         { "name": "sal", "quantity": 0.0, "unit": "al gusto" },
         { "name": "pimienta", "quantity": 0.0, "unit": "al gusto" }
     ]
+}
+
+{
+  "recipe_id": 5,
+  "ingredients": [
+    { "ingredient_id": 43, "quantity": 1.0, "unit": "kg" },
+    { "ingredient_id": 44, "quantity": 2.0, "unit": "unidad" },
+    { "ingredient_id": 15, "quantity": 1.0, "unit": "unidad" },
+    { "ingredient_id": 5, "quantity": 2.0, "unit": "diente" },
+    { "ingredient_id": 35, "quantity": 1.0, "unit": "unidad" },
+    { "ingredient_id": 13, "quantity": 1.0, "unit": "taza" },
+    { "ingredient_id": 2, "quantity": 2.0, "unit": "cucharada" },
+    { "ingredient_id": 42, "quantity": 0.0, "unit": "al gusto" },
+    { "ingredient_id": 34, "quantity": 0.0, "unit": "al gusto" }
+  ]
 }

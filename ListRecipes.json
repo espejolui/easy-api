@@ -73,12 +73,12 @@
     "id": 5,
     "day_week": "martes",
     "type_food": "almuerzo",
-    "title": "Sobrebarriga en salsa criolla",
+    "title": "sobrebarriga en salsa criolla",
     "preparation": "Cocinar la sobrebarriga en una olla grande con agua y sal hasta que esté tierna (aproximadamente 2 horas). Retirar y reservar. Para la salsa criolla, picar finamente los tomates, la cebolla, el ajo y el pimiento. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que estén blandos. Agregar el caldo de res y cocinar hasta que la salsa espese. Cortar la sobrebarriga en trozos y añadirla a la salsa. Dejar cocinar a fuego bajo por unos minutos para que la carne absorba los sabores. Servir caliente, acompañado de arroz blanco y plátano maduro frito.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Sobrebarriga_en_salsa_criolla_ooq6al.webp",
     "ingredients": [
-      { "name": "Sobrebarriga", "amount": "1 kilo" },
-      { "name": "Tomate", "amount": "2 unidades" },
+      { "name": "sobrebarriga", "amount": "1 kg" },
+      { "name": "Tomate", "amount": "2 unidad" },
       { "name": "Cebolla", "amount": "1 unidad" },
       { "name": "Ajo", "amount": "2 dientes" },
       { "name": "Pimiento rojo", "amount": "1 unidad" },
@@ -92,18 +92,18 @@
     "id": 6,
     "day_week": "martes",
     "type_food": "cena",
-    "title": "Sopa de verduras",
+    "title": "sopa de verduras",
     "preparation": "Pelar y cortar todas las verduras en trozos pequeños. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que las verduras estén tiernas. Sazonar con sal y pimienta al gusto y servir caliente.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Sopa_de_verduras_xwd36t.webp",
     "ingredients": [
-      { "name": "Zanahoria", "amount": "1 unidad" },
-      { "name": "Puerro", "amount": "1 unidad" },
-      { "name": "Patata", "amount": "1 unidad" },
+      { "name": "zanahoria", "amount": "1 unidad" },
+      { "name": "puerro", "amount": "1 unidad" },
+      { "name": "papa criolla", "amount": "1 unidad" },
       { "name": "calabacín", "amount": "1 unidad" },
-      { "name": "Caldo de verduras", "amount": "1 litro" },
-      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
-      { "name": "Sal", "amount": "al gusto" },
-      { "name": "Pimienta", "amount": "al gusto" }
+      { "name": "caldo de verduras", "amount": "1 litro" },
+      { "name": "aceite de oliva", "amount": "2 cucharada" },
+      { "name": "sal", "amount": "al gusto" },
+      { "name": "pimienta", "amount": "al gusto" }
     ]
   },
 
@@ -111,15 +111,15 @@
     "id": 7,
     "day_week": "miercoles",
     "type_food": "desayuno",
-    "title": "Tostadas con tomate y jamón ",
+    "title": "tostadas con tomate y jamón ",
     "preparation": "Tostar las rebanadas de pan. Rallar el tomate y untarlo sobre las tostadas. Colocar el jamón encima y rociar con aceite de oliva. Sazonar con sal al gusto. ",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296683/Tostadas_con_Tomate_y_Jam%C3%B3n_lv8p1q.webp",
     "ingredients": [
-      { "name": "Pan integral", "amount": "2 rebanadas" },
-      { "name": "Tomate", "amount": "1 unidad" },
-      { "name": "Lonchas de jamón serrano", "amount": "2 lonchas" },
-      { "name": "Aceite de oliva", "amount": "2 cucharadas" },
-      { "name": "Sal", "amount": "al gusto" }
+      { "name": "pan integral", "amount": "2 rebanada" },
+      { "name": "tomate", "amount": "1 unidad" },
+      { "name": "lonchas de jamón serrano", "amount": "2 loncha" },
+      { "name": "aceite de oliva", "amount": "2 cucharada" },
+      { "name": "sal", "amount": "al gusto" }
     ]
   },
   {
