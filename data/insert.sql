@@ -20,12 +20,6 @@ INSERT INTO recipe(title, preparation, photo, day_id, type_id)
       (SELECT id FROM day WHERE day_week = 'lunes'),
       (SELECT id FROM type WHERE type_food = 'desayuno'));
 
--- 4. Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
-SELECT r.id, r.title, d.day_week, t.type_food
-  FROM recipe r
-  JOIN day d ON r.day_id = d.id
-  JOIN type t ON r.type_id = t.id;
-
 -- 5. Insertar datos en la tabla 'ingredient'
 INSERT INTO ingredient (name) VALUES
     ('aceite'),
@@ -93,3 +87,9 @@ INSERT INTO unit (name) VALUES
     ('taza'),
     ('unidad'),
     ('loncha');
+
+-- 4. Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
+SELECT r.id, r.title, d.day_week, t.type_food
+  FROM recipe r
+  JOIN day d ON r.day_id = d.id
+  JOIN type t ON r.type_id = t.id;
