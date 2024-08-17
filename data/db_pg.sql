@@ -85,15 +85,139 @@ JOIN type t ON r.type_id = t.id;
 -- 5. Crear la tabla 'ingredient'
 CREATE TABLE ingredient (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    amount VARCHAR(50) NOT NULL
+    name VARCHAR(50) NOT NULL UNIQUE
 );
 
--- 6. Crear la tabla para relación tabla "recipe" con tabla "ingresient"
+-- 5.1. Insertar datos en la tabla 'ingredient'
+INSERT INTO ingredient (name) VALUES
+    ('aceite'),
+    ('aceite de oliva'),
+    ('agua'),
+    ('aguacate'),
+    ('ajo'),
+    ('albahaca'),
+    ('alcaparras'),
+    ('arina de maíz precocida'),
+    ('arroz'),
+    ('calabacín'),
+    ('calabaza'),
+    ('caldo de pollo'),
+    ('caldo de res'),
+    ('caldo de verduras'),
+    ('cebolla blanca'),
+    ('cebolla morada'),
+    ('cereal'),
+    ('crema de leche'),
+    ('filete de salmón'),
+    ('guascas'),
+    ('guisantes'),
+    ('huevos'),
+    ('lechuga romana'),
+    ('mantequilla'),
+    ('mazorcas en trozos'),
+    ('ñame'),
+    ('pan integral'),
+    ('papa criolla'),
+    ('papa pastusa'),
+    ('papa sabanera'),
+    ('pasta'),
+    ('pechuga de pollo'),
+    ('pepino'),
+    ('pimienta'),
+    ('pimiento rojo'),
+    ('piñones'),
+    ('puerro'),
+    ('puñado de frutas'),
+    ('queso costeño'),
+    ('queso parmesano rallado'),
+    ('queso rallado'),
+    ('sal'),
+    ('sobrebarriga'),
+    ('tomate'),
+    ('tomate triturado'),
+    ('yogurt natural'),
+    ('zanahoria'),
+    ('zumo de limón');
+
+-- 6. Crear la tabla 'unit'
+CREATE TABLE unit (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- 6.1. Insertando datos en la tabla 'unit'
+INSERT INTO unit (name) VALUES
+    ('al gusto'),
+    ('cucharada'),
+    ('diente'),
+    ('gr'),
+    ('kg'),
+    ('lata'),
+    ('libra'),
+    ('litro'),
+    ('rebanada'),
+    ('taza'),
+    ('unidad');
+
+-- 7. Crear la tabla para relación tabla "recipe" con tabla "ingredient"
 CREATE TABLE recipe_ingredient (
-    recipe_id INT,
-    ingredient_id INT,
+    recipe_id INTEGER,
+    ingredient_id INTEGER,
+    quantity NUMERIC(5, 2),
+    unit_id INTEGER,
     PRIMARY KEY (recipe_id, ingredient_id),
     FOREIGN KEY (recipe_id) REFERENCES recipe(id),
-    FOREIGN KEY (ingredient_id) REFERENCES ingredient(id)
+    FOREIGN KEY (ingredient_id) REFERENCES ingredient(id),
+    FOREIGN KEY (unit_id) REFERENCES unit(id)
 );
+
+-- 7.1 Consultar los id de los datos a ingresar
+SELECT id, name FROM ingredient WHERE name IN ('puñado de frutas', 'yogurt natural', 'cereal');
+SELECT id, name FROM unit WHERE name IN ('unidad', 'taza');
+
+-- 7.2. Insertar datos en la tabla recipe_ingredient con los ID consultados anteriormente
+INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id)
+VALUES
+    (1, 17, 0.5, 10),  -- Cereal
+    (1, 38, 0.0, 1),  -- Puñado de frutas
+    (1, 46, 1.0, 10);  -- Yogurt natural
+
+-- 7.3. Opcioal para ingresar datos
+INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id)
+VALUES
+  (3, (SELECT id FROM ingredient WHERE name = 'papa pastusa'), 4.00, (SELECT id FROM unit WHERE name = 'unidad')),
+  (3, (SELECT id FROM ingredient WHERE name = 'cebolla blanca'), 1.00, (SELECT id FROM unit WHERE name = 'unidad')),
+  (3, (SELECT id FROM ingredient WHERE name = 'huevos'), 5.00, (SELECT id FROM unit WHERE name = 'unidad')),
+  (3, (SELECT id FROM ingredient WHERE name = 'aceite de oliva'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
+  (3, (SELECT id FROM ingredient WHERE name = 'sal'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
+  (3, (SELECT id FROM ingredient WHERE name = 'pimienta'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto'));
+
+-- 8. Crear la tabla para relación "ingredient" con tabla "unit"
+CREATE TABLE unit_ingredient (
+  ingredient_id INTEGER,
+  unit_id INTEGER,
+  PRIMARY KEY (ingredient_id, unit_id),
+  FOREIGN KEY (ingredient_id) REFERENCES ingredient(id),
+  FOREIGN KEY (unit_id) REFERENCES unit(id)
+);
+
+SELECT
+    r.title,
+    r.photo,
+    d.day_week,
+    t.type_food,
+    STRING_AGG(i.name || ' (' || ri.quantity || ' ' || u.name || ')', ', ') AS ingredients
+FROM
+    recipe r
+JOIN
+    day d ON r.day_id = d.id
+JOIN
+    type t ON r.type_id = t.id
+JOIN
+    recipe_ingredient ri ON r.id = ri.recipe_id
+JOIN
+    ingredient i ON ri.ingredient_id = i.id
+JOIN
+    unit u ON ri.unit_id = u.id
+GROUP BY
+    r.title, r.photo, d.day_week, t.type_food;
