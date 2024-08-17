@@ -202,7 +202,6 @@ CREATE TABLE unit_ingredient (
 );
 
 SELECT
-    r.id,
     r.title,
     d.day_week,
     t.type_food,
@@ -220,4 +219,4 @@ JOIN
 JOIN
     unit u ON ri.unit_id = u.id
 GROUP BY
-    r.id, r.title, d.day_week, t.type_food;
+    r.title, d.day_week, t.type_food;
