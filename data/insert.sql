@@ -1,66 +1,95 @@
--- RECETA #1. Consultar los id de los datos a ingresar
-SELECT id, name FROM ingredient WHERE name IN ('puñado de frutas', 'yogurt natural', 'cereal');
-SELECT id, name FROM unit WHERE name IN ('unidad', 'taza');
+-- 1. Insertar datos en la tabla 'day'
+INSERT INTO day(day_week) VALUES
+  ('lunes'),
+  ('martes'),
+  ('miercoles'),
+  ('jueves'),
+  ('viernes');
 
--- Insertar datos en la tabla recipe_ingredient con los ID consultados anteriormente
-INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id)
-VALUES
-    (1, 17, 0.5, 10),  -- Cereal
-    (1, 38, 0.0, 1),  -- Puñado de frutas
-    (1, 46, 1.0, 10);  -- Yogurt natural
+-- 2. Insertar datos en la tabla 'type'
+INSERT INTO type(type_food) VALUES
+  ('desayuno'),
+  ('almuerzo'),
+  ('cena');
 
--- RECETA #2.
-INSERT INTO recipe_ingredient (recipe_id, ingredient_id, quantity, unit_id)
-VALUES
-  (3, (SELECT id FROM ingredient WHERE name = 'papa pastusa'), 4.00, (SELECT id FROM unit WHERE name = 'unidad')),
-  (3, (SELECT id FROM ingredient WHERE name = 'cebolla blanca'), 1.00, (SELECT id FROM unit WHERE name = 'unidad')),
-  (3, (SELECT id FROM ingredient WHERE name = 'huevos'), 5.00, (SELECT id FROM unit WHERE name = 'unidad')),
-  (3, (SELECT id FROM ingredient WHERE name = 'aceite de oliva'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
-  (3, (SELECT id FROM ingredient WHERE name = 'sal'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto')),
-  (3, (SELECT id FROM ingredient WHERE name = 'pimienta'), 0.00, (SELECT id FROM unit WHERE name = 'al gusto'));
+-- 3. Insertar datos en la tabla 'recipe' desde postgres, si es con el endpoint es de otra forma
+INSERT INTO recipe(title, preparation, photo, day_id, type_id)
+  VALUES('Yogurt con cereal y frutas',
+      'Colocar el yogurt en un bol, añadir el cereal y las frutas por encima y servir inmediatamente.',
+      'https://res.cloudinary.com/dopllrjwh/image/upload/v1720296686/Yogur_con_Cereal_y_Frutas_vqppsb.webp',
+      (SELECT id FROM day WHERE day_week = 'lunes'),
+      (SELECT id FROM type WHERE type_food = 'desayuno'));
 
--- RECETA #2. hecha con el endpoint de la API
-{
-    "recipe_id": 2,
-    "ingredients": [
-        { "name": "pan integral", "quantity": 2.0, "unit": "rebanada" },
-        { "name": "aguacate maduro", "quantity": 1.0, "unit": "unidad" },
-        { "name": "huevos", "quantity": 2.0, "unit": "unidad" },
-        { "name": "sal", "quantity": 0.0, "unit": "al gusto" },
-        { "name": "pimienta", "quantity": 0.0, "unit": "al gusto" },
-        { "name": "zanahoria", "quantity": 1.0, "unit": "unidad" },
-        { "name": "guisantes", "quantity": 1.0, "unit": "lata" },
-        { "name": "tomate", "quantity": 1.0, "unit": "lata" },
-        { "name": "caldo de pollo", "quantity": "al gusto", "unit": "unidad" },
-        { "name": "aceite de oliva", "quantity": "al gusto", "unit": "unidad" },
-        { "name": "sal", "quantity": "al gusto", "unit": "unidad" },
-        { "name": "pimienta", "quantity": "al gusto", "unit": "unidad" }
-    ]
-}
+-- 4. Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
+SELECT r.id, r.title, d.day_week, t.type_food
+  FROM recipe r
+  JOIN day d ON r.day_id = d.id
+  JOIN type t ON r.type_id = t.id;
 
--- RECETA #4. hecha desde psql
-{
-    "recipe_id": 4,
-    "ingredients": [
-        { "name": "pan integral", "quantity": 2.0, "unit": "rebanada" },
-        { "name": "aguacate maduro", "quantity": 1.0, "unit": "unidad" },
-        { "name": "huevos", "quantity": 2.0, "unit": "unidad" },
-        { "name": "sal", "quantity": 0.0, "unit": "al gusto" },
-        { "name": "pimienta", "quantity": 0.0, "unit": "al gusto" }
-    ]
-}
+-- 5. Insertar datos en la tabla 'ingredient'
+INSERT INTO ingredient (name) VALUES
+    ('aceite'),
+    ('aceite de oliva'),
+    ('agua'),
+    ('aguacate'),
+    ('ajo'),
+    ('albahaca'),
+    ('alcaparras'),
+    ('arina de maíz precocida'),
+    ('arroz'),
+    ('calabacín'),
+    ('calabaza'),
+    ('caldo de pollo'),
+    ('caldo de res'),
+    ('caldo de verduras'),
+    ('cebolla blanca'),
+    ('cebolla morada'),
+    ('cereal'),
+    ('crema de leche'),
+    ('filete de salmón'),
+    ('guascas'),
+    ('guisantes'),
+    ('huevos'),
+    ('lechuga romana'),
+    ('mantequilla'),
+    ('mazorcas en trozos'),
+    ('ñame'),
+    ('pan integral'),
+    ('papa criolla'),
+    ('papa pastusa'),
+    ('papa sabanera'),
+    ('pasta'),
+    ('pechuga de pollo'),
+    ('pepino'),
+    ('pimienta'),
+    ('pimiento rojo'),
+    ('piñones'),
+    ('puerro'),
+    ('puñado de frutas'),
+    ('queso costeño'),
+    ('queso parmesano rallado'),
+    ('queso rallado'),
+    ('sal'),
+    ('sobrebarriga'),
+    ('tomate'),
+    ('tomate triturado'),
+    ('yogurt natural'),
+    ('zanahoria'),
+    ('zumo de limón'),
+    ('lonchas de jamón serrano'),
+    ('berenjena');
 
-{
-  "recipe_id": 5,
-  "ingredients": [
-    { "ingredient_id": 43, "quantity": 1.0, "unit": "kg" },
-    { "ingredient_id": 44, "quantity": 2.0, "unit": "unidad" },
-    { "ingredient_id": 15, "quantity": 1.0, "unit": "unidad" },
-    { "ingredient_id": 5, "quantity": 2.0, "unit": "diente" },
-    { "ingredient_id": 35, "quantity": 1.0, "unit": "unidad" },
-    { "ingredient_id": 13, "quantity": 1.0, "unit": "taza" },
-    { "ingredient_id": 2, "quantity": 2.0, "unit": "cucharada" },
-    { "ingredient_id": 42, "quantity": 0.0, "unit": "al gusto" },
-    { "ingredient_id": 34, "quantity": 0.0, "unit": "al gusto" }
-  ]
-}
+-- 6. Insertando datos en la tabla 'unit'
+INSERT INTO unit (name) VALUES
+    ('al gusto'),
+    ('cucharada'),
+    ('diente'),
+    ('gr'),
+    ('kg'),
+    ('lata'),
+    ('libra'),
+    ('litro'),
+    ('rebanada'),
+    ('taza'),
+    ('unidad'),
+    ('loncha');
