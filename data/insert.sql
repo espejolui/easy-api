@@ -88,8 +88,13 @@ INSERT INTO unit (name) VALUES
     ('unidad'),
     ('loncha');
 
--- 4. Leer datos de la tabla 'recipe' con joins usando alias sobre las tablas
-SELECT r.id, r.title, d.day_week, t.type_food
-  FROM recipe r
-  JOIN day d ON r.day_id = d.id
-  JOIN type t ON r.type_id = t.id;
+
+-- Formato para insertar relación de recipe_ingredient_unit
+[
+    {
+      "recipe_id": "3413d62f-2bc2-4f0f-b6be-1b2c1cfdcee3",
+      "ingredient_id": "13343f43-1d03-44d5-8d13-70604e142405",
+      "unit_id": "a8d342e9-b3a9-4405-9427-ad79356c2336",
+      "quantity": 1.00
+    }
+]
