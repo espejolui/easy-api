@@ -3,8 +3,8 @@
     "id": 1,
     "day_week": "lunes",
     "type_food": "desayuno",
-    "title": "yogurt con cereal y frutas",
-    "preparation": "Colocar el yogurt en un bol. Añadir el cereal y las frutas por encima. Servir inmediatamente.",
+    "title": "Yogurt con cereal y frutas",
+    "preparation": "Colocar el yogurt en un bol. Añadir el cereal y las frutas por encima. Servir inmediatamente",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296686/Yogur_con_Cereal_y_Frutas_vqppsb.webp",
     "ingredients": [
       { "name": "Puñado de frutas", "amount": "al gusto" },

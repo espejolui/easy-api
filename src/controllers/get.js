@@ -8,7 +8,10 @@ export const getRecipes = async (req, res) => {
     const { rows } = await pool.query(
       `SELECT
          r.id,
-         r.title,
+         r.title AS name_recipe,
+         r.preparation,
+         t.type_food,
+         d.day_week,
          r.photo,
          i.name AS ingredient_name,
          u.name AS unit,
@@ -17,6 +20,8 @@ export const getRecipes = async (req, res) => {
        LEFT JOIN recipe_ingredient_unit riu ON r.id = riu.recipe_id
        LEFT JOIN ingredient i ON riu.ingredient_id = i.id
        LEFT JOIN unit u ON riu.unit_id = u.id
+       LEFT JOIN type t ON r.type_id = t.id
+       left JOIN day d ON r.day_id = d.id
        LIMIT $1 OFFSET $2`,
       [limit, offset],
     );
@@ -27,7 +32,11 @@ export const getRecipes = async (req, res) => {
     rows.forEach((row) => {
       if (!recipes[row.id]) {
         recipes[row.id] = {
-          title: row.title,
+          id: row.id,
+          name_recipe: row.name_recipe,
+          preparation: row.preparation,
+          type_food: row.type_food,
+          day_week: row.day_week,
           photo: row.photo,
           ingredients: [],
         };
