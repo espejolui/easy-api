@@ -22,8 +22,7 @@ export const getRecipes = async (req, res) => {
        LEFT JOIN unit u ON riu.unit_id = u.id
        LEFT JOIN type t ON r.type_id = t.id
        left JOIN day d ON r.day_id = d.id
-       LIMIT $1 OFFSET $2`,
-      [limit, offset],
+       `,
     );
 
     // Agrupar ingredientes por receta

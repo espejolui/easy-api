@@ -40,7 +40,7 @@
     "id": 3,
     "day_week": "lunes",
     "type_food": "cena",
-    "title": "tortilla de patatas",
+    "title": "Tortilla de patatas",
     "preparation": "Pelar y cortar las patatas en rodajas finas. Picar la cebolla. Freír las patatas y la cebolla en abundante aceite hasta que estén tiernas. Batir los huevos en un bol grande y agregar las patatas y la cebolla escurridas. Mezclar bien. Calentar un poco de aceite en una sartén y verter la mezcla. Cocinar a fuego medio hasta que esté cuajada, luego dar la vuelta con la ayuda de un plato y cocinar por el otro lado.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Tortilla_con_papatatas_dc0h8u.webp",
     "ingredients": [
@@ -57,8 +57,8 @@
     "id": 4,
     "day_week": "martes",
     "type_food": "desayuno",
-    "title": "tostadas con aguacate y huevo",
-    "preparation": "Tostar las rebanadas de pan. Aplastar el aguacate y untarlo sobre las tostadas. Cocinar los huevos al gusto (poché, revueltos o fritos) y colocarlos sobre el aguacate.Sazonar con sal y pimienta al gusto.",
+    "title": "Tostadas con aguacate y huevo",
+    "preparation": "Tostar las rebanadas de pan. Aplastar el aguacate y untarlo sobre las tostadas. Cocinar los huevos al gusto (poché, revueltos o fritos) y colocarlos sobre el aguacate.Sazonar con sal y pimienta al gust.",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296681/Tostadas_con_aguacate_y_huevo_wkuc6e.webp",
     "ingredients": [
       { "name": "Pan integral", "amount": "2 rebanadas" },
@@ -73,8 +73,8 @@
     "id": 5,
     "day_week": "martes",
     "type_food": "almuerzo",
-    "title": "sobrebarriga en salsa criolla",
-    "preparation": "Cocinar la sobrebarriga en una olla grande con agua y sal hasta que esté tierna (aproximadamente 2 horas). Retirar y reservar. Para la salsa criolla, picar finamente los tomates, la cebolla, el ajo y el pimiento. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que estén blandos. Agregar el caldo de res y cocinar hasta que la salsa espese. Cortar la sobrebarriga en trozos y añadirla a la salsa. Dejar cocinar a fuego bajo por unos minutos para que la carne absorba los sabores. Servir caliente, acompañado de arroz blanco y plátano maduro frito.",
+    "title": "Sobrebarriga en salsa criolla",
+    "preparation": "Cocinar la sobrebarriga en una olla grande con agua y sal hasta que esté tierna (aproximadamente 2 horas). Retirar y reservar. Para la salsa criolla, picar finamente los tomates, la cebolla, el ajo y el pimiento. Calentar el aceite en una sartén y sofreír los ingredientes picados hasta que estén blandos. Agregar el caldo de res y cocinar hasta que la salsa espese. Cortar la sobrebarriga en trozos y añadirla a la salsa. Dejar cocinar a fuego bajo por unos minutos para que la carne absorba los sabores. Servir caliente, acompañado de arroz blanco y plátano maduro frito",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296677/Sobrebarriga_en_salsa_criolla_ooq6al.webp",
     "ingredients": [
       { "name": "sobrebarriga", "amount": "1 kg" },
@@ -92,8 +92,8 @@
     "id": 6,
     "day_week": "martes",
     "type_food": "cena",
-    "title": "sopa de verduras",
-    "preparation": "Pelar y cortar todas las verduras en trozos pequeños. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que las verduras estén tiernas. Sazonar con sal y pimienta al gusto y servir caliente.",
+    "title": "Sopa de verduras",
+    "preparation": "Pelar y cortar todas las verduras en trozos pequeños. Calentar el aceite en una olla y rehogar las verduras durante unos minutos. Añadir el caldo de verduras y cocinar a fuego medio hasta que las verduras estén tiernas. Sazonar con sal y pimienta al gusto y servir caliente",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296678/Sopa_de_verduras_xwd36t.webp",
     "ingredients": [
       { "name": "zanahoria", "amount": "1 unidad" },
@@ -111,8 +111,8 @@
     "id": 7,
     "day_week": "miercoles",
     "type_food": "desayuno",
-    "title": "tostadas con tomate y jamón ",
-    "preparation": "Tostar las rebanadas de pan. Rallar el tomate y untarlo sobre las tostadas. Colocar el jamón encima y rociar con aceite de oliva. Sazonar con sal al gusto. ",
+    "title": "Tostadas con tomate y jamón",
+    "preparation": "Tostar las rebanadas de pan. Rallar el tomate y untarlo sobre las tostadas. Colocar el jamón encima y rociar con aceite de oliva. Sazonar con sal al gusto",
     "photo": "https://res.cloudinary.com/dopllrjwh/image/upload/v1720296683/Tostadas_con_Tomate_y_Jam%C3%B3n_lv8p1q.webp",
     "ingredients": [
       { "name": "pan integral", "amount": "2 rebanada" },
